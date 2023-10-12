@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-------------
+    Div für die ausgabe von 
+    Javascript in Html
+    -------------->
+    <div id="abc"><h1>Aufgabe 3a</h1></div>
+
+    <!---------
+        JavaScript... Start
+        --------->
+    <script>
+      let StaedteDerWelt = [
+        "Argentinien",
+        "Belgien",
+        "Chile",
+        "Deutschland",
+        "England",
+      ];
+
+      /***********
+       * Funktion
+       ***********/
+      function ReiseZiele(beschreibung, liste) {
+        for (let loop = 0; loop < liste.length; loop++)
+          verbinden.innerHTML += "<p>" + beschreibung + liste[loop] + "</p>";
+      }
+
+      /***********
+       * HTML verbindung
+       ***********/
+      const verbinden = document.getElementById("abc");
+
+      /***********
+       * Funktion ausgeben
+       ***********/
+      ReiseZiele("Die nächste Stadt heißt :", StaedteDerWelt);
+    </script>
+    <!---------
+        JavaScript... Ende
+        --------->
+  </body>
+</html>

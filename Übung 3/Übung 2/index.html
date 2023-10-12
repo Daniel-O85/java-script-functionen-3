@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-------------
+    Div für die ausgabe von 
+    Javascript in Html
+    -------------->
+    <div id="ergebnis"><h1>Aufgabe 2</h1></div>
+
+    <!---------
+        JavaScript... Start
+        --------->
+    <script>
+      /***********
+       * Funktion
+       ***********/
+      function sagWas(Titel, Info) {
+        return "<h3>" + Titel + "</h3> <P>" + Info + "</p>";
+      }
+
+      /***********
+       * HTML verbindung
+       ***********/
+      const verbinden = document.getElementById("ergebnis");
+
+      /***********
+       * Funktion ausgeben
+       ***********/
+      verbinden.innerHTML += sagWas(
+        "Schumacher",
+        "War ein Legendärer Rennfahrer"
+      );
+      verbinden.innerHTML += sagWas("Käsekuchen", "Ist sehr lecker");
+    </script>
+    <!---------
+        JavaScript... Ende
+        --------->
+  </body>
+</html>

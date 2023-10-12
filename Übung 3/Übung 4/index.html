@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-------------
+    Div für die ausgabe von 
+    Javascript in Html
+    -------------->
+    <div id="inhalt"><h1>Aufgabe 4</h1></div>
+
+    <!---------
+        JavaScript... Start
+        --------->
+    <script>
+      /***********
+       * HTML verbindung
+       ***********/
+      const verbinden = document.getElementById("inhalt");
+      /****************************
+       * Funktion 1 Hintergrundfarben
+       ****************************/
+      function Farbe(nummer) {
+        if (nummer == 0) {
+          return "black";
+        } else if (nummer == 1) {
+          return "white";
+        } else if (nummer == 2) {
+          return "gray";
+        } else if (nummer == 3) {
+          return "blue";
+        } else if (nummer == 4) {
+          return "green";
+        } else if (nummer == 5) {
+          return "red";
+        } else if (nummer == 6) {
+          return "pink";
+        } else if (nummer == 7) {
+          return "silver";
+        } else if (nummer == 8) {
+          return "darkblue";
+        } else if (nummer == 9) {
+          return "navy";
+        } else if (nummer == 10) {
+          return "skyblue";
+        } else if (nummer == 11) {
+          return "yellow";
+        }
+      }
+
+      /***********************
+       * Funktion 2 Text und Farbe
+       ***********************/
+      function Mixen(wert, farbnummer) {
+        return (
+          "<div style='background-color:" +
+          Farbe(farbnummer) +
+          ";'>" +
+          wert +
+          "</div>"
+        );
+      }
+      /***********
+       * Ausgabe in Html
+       ***********/
+      verbinden.innerHTML += Mixen("Der Himmel ist", 10);
+      verbinden.innerHTML += Mixen("Das Meer ist", 3);
+      verbinden.innerHTML += Mixen("Der Wald ist voller Grün ", 4);
+    </script>
+    <!---------
+        JavaScript... Ende
+        --------->
+  </body>
+</html>

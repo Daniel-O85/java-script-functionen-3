@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-------------
+    Div für die ausgabe von 
+    Javascript in Html
+    -------------->
+    <div id="ausgabe"><h1>Aufgabe 1</h1></div>
+    <!---------
+        JavaScript... Start
+        --------->
+    <script>
+      /***********
+       * HTML verbindung
+       ***********/
+      const conect = document.getElementById("ausgabe");
+
+      /***********
+       * Funktion
+       ***********/
+      function rechnen(z1, z2, rw) {
+        if (rw == "+") {
+          return z1 + z2;
+        } else if (rw == "-") {
+          return z1 - z2;
+        } else if (rw == "*") {
+          return z1 * z2;
+        } else if (rw == "/") {
+          return z1 / z2;
+        }
+      }
+      /***********
+       * Funktion ausgeben
+       ***********/
+      // Plus rechnen
+      conect.innerHTML += "<p>" + "5 + 7 =" + rechnen(5, 7, "+") + "</p>";
+      // Minus rechnen
+      conect.innerHTML += "<p>" + "8 - 2 =" + rechnen(8, 2, "-") + "</p>";
+      // Mal rechnen
+      conect.innerHTML += "<p>" + "32 * 1.5 =" + rechnen(32, 1.5, "*") + "</p>";
+      // Geteilt rechnen
+      conect.innerHTML += "<p>" + "128 / 8 =" + rechnen(128, 8, "/") + "</p>";
+    </script>
+    <!---------
+        JavaScript... Ende
+        --------->
+  </body>
+</html>

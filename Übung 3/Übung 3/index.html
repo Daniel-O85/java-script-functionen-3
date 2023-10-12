@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-------------
+    Div für die ausgabe von 
+    Javascript in Html
+    -------------->
+    <div id="abc"><h1>Aufgabe 3</h1></div>
+
+    <!---------
+        JavaScript... Start
+        --------->
+    <script>
+      const StaedteDerWelt = [
+        "Argentinien",
+        "Belgien",
+        "Chile",
+        "Deutschland",
+        "England",
+      ];
+
+      function ReiseZiele(beschreibung, liste) {
+        return "<p>" + beschreibung + "</p> <h3>" + liste + "</p>";
+      }
+
+      /***********
+       * HTML verbindung
+       ***********/
+      const verbinden = document.getElementById("abc");
+
+      /***********
+       * Funktion ausgeben
+       ***********/
+      verbinden.innerHTML += ReiseZiele(
+        "Argentinien ist schön",
+        StaedteDerWelt[0]
+      );
+      verbinden.innerHTML += ReiseZiele(
+        "Belgien ist schöner",
+        StaedteDerWelt[1]
+      );
+      verbinden.innerHTML += ReiseZiele(
+        "Chile ist noch schöner",
+        StaedteDerWelt[2]
+      );
+      verbinden.innerHTML += ReiseZiele(
+        "Deutschland ist am schönsten",
+        StaedteDerWelt[3]
+      );
+      verbinden.innerHTML += ReiseZiele(
+        "England ist hässlig",
+        StaedteDerWelt[4]
+      );
+    </script>
+    <!---------
+        JavaScript... Ende
+        --------->
+  </body>
+</html>
